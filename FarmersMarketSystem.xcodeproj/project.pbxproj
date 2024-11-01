@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		0FEAADB22CD38EE0009DEA2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */; };
 		0FEAADB42CD38EE0009DEA2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */; };
-		0FEAADB62CD38EE0009DEA2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB52CD38EE0009DEA2F /* ViewController.swift */; };
-		0FEAADB92CD38EE0009DEA2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEAADB72CD38EE0009DEA2F /* Main.storyboard */; };
+		0FEAADB62CD38EE0009DEA2F /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */; };
 		0FEAADBB2CD38EE2009DEA2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */; };
 		0FEAADBE2CD38EE2009DEA2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */; };
+		0FEAADC62CD3A78C009DEA2F /* UiColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */; };
+		0FEAADC82CD3B142009DEA2F /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */; };
+		0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */; };
+		0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */; };
+		0FEAADCE2CD4E70F009DEA2F /* CustomUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0FEAADAE2CD38EE0009DEA2F /* FarmersMarketSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmersMarketSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0FEAADB52CD38EE0009DEA2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0FEAADB82CD38EE0009DEA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FEAADBD2CD38EE2009DEA2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FEAADBF2CD38EE2009DEA2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiColorExtension.swift; sourceTree = "<group>"; };
+		0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
+		0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageVC.swift; sourceTree = "<group>"; };
+		0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIClasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */,
+				0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */,
+				0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */,
 				0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */,
-				0FEAADB52CD38EE0009DEA2F /* ViewController.swift */,
-				0FEAADB72CD38EE0009DEA2F /* Main.storyboard */,
+				0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */,
+				0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */,
+				0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */,
+				0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */,
 				0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */,
 				0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */,
 				0FEAADBF2CD38EE2009DEA2F /* Info.plist */,
@@ -127,7 +139,6 @@
 			files = (
 				0FEAADBE2CD38EE2009DEA2F /* LaunchScreen.storyboard in Resources */,
 				0FEAADBB2CD38EE2009DEA2F /* Assets.xcassets in Resources */,
-				0FEAADB92CD38EE0009DEA2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +149,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FEAADB62CD38EE0009DEA2F /* ViewController.swift in Sources */,
+				0FEAADC82CD3B142009DEA2F /* LoginPageVC.swift in Sources */,
+				0FEAADB62CD38EE0009DEA2F /* OnboardingVC.swift in Sources */,
+				0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */,
 				0FEAADB22CD38EE0009DEA2F /* AppDelegate.swift in Sources */,
 				0FEAADB42CD38EE0009DEA2F /* SceneDelegate.swift in Sources */,
+				0FEAADC62CD3A78C009DEA2F /* UiColorExtension.swift in Sources */,
+				0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */,
+				0FEAADCE2CD4E70F009DEA2F /* CustomUIClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0FEAADB72CD38EE0009DEA2F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0FEAADB82CD38EE0009DEA2F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +305,6 @@
 				INFOPLIST_FILE = FarmersMarketSystem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +332,6 @@
 				INFOPLIST_FILE = FarmersMarketSystem/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
