@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F7122D32CE259E900124CE9 /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7122D22CE259E900124CE9 /* PhoneNumberVC.swift */; };
+		0F7122D52CE26D8A00124CE9 /* FarmSignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7122D42CE26D8A00124CE9 /* FarmSignupVC.swift */; };
+		0F7122D72CE2706A00124CE9 /* PendingFarmerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7122D62CE2706A00124CE9 /* PendingFarmerVC.swift */; };
 		0FEAADB22CD38EE0009DEA2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */; };
 		0FEAADB42CD38EE0009DEA2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */; };
 		0FEAADB62CD38EE0009DEA2F /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */; };
@@ -17,9 +20,14 @@
 		0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */; };
 		0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */; };
 		0FEAADCE2CD4E70F009DEA2F /* CustomUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */; };
+		0FEAADD42CD565EE009DEA2F /* SelectRoleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADD32CD565EE009DEA2F /* SelectRoleVC.swift */; };
+		0FEAADD62CDA53A4009DEA2F /* SelectLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADD52CDA53A4009DEA2F /* SelectLocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F7122D22CE259E900124CE9 /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
+		0F7122D42CE26D8A00124CE9 /* FarmSignupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmSignupVC.swift; sourceTree = "<group>"; };
+		0F7122D62CE2706A00124CE9 /* PendingFarmerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingFarmerVC.swift; sourceTree = "<group>"; };
 		0FEAADAE2CD38EE0009DEA2F /* FarmersMarketSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FarmersMarketSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +40,8 @@
 		0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageVC.swift; sourceTree = "<group>"; };
 		0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIClasses.swift; sourceTree = "<group>"; };
+		0FEAADD32CD565EE009DEA2F /* SelectRoleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleVC.swift; sourceTree = "<group>"; };
+		0FEAADD52CDA53A4009DEA2F /* SelectLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F7122AA2CDCB5A000124CE9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FEAADD32CD565EE009DEA2F /* SelectRoleVC.swift */,
+				0F7122D22CE259E900124CE9 /* PhoneNumberVC.swift */,
+				0FEAADD52CDA53A4009DEA2F /* SelectLocationVC.swift */,
+				0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */,
+				0F7122D42CE26D8A00124CE9 /* FarmSignupVC.swift */,
+				0F7122D62CE2706A00124CE9 /* PendingFarmerVC.swift */,
+				0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */,
+				0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		0FEAADA52CD38EE0009DEA2F = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +93,8 @@
 				0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */,
 				0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */,
 				0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */,
+				0F7122AA2CDCB5A000124CE9 /* ViewControllers */,
 				0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */,
-				0FEAADB52CD38EE0009DEA2F /* OnboardingVC.swift */,
-				0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */,
-				0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */,
 				0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */,
 				0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */,
 				0FEAADBF2CD38EE2009DEA2F /* Info.plist */,
@@ -149,10 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEAADD42CD565EE009DEA2F /* SelectRoleVC.swift in Sources */,
 				0FEAADC82CD3B142009DEA2F /* LoginPageVC.swift in Sources */,
+				0F7122D52CE26D8A00124CE9 /* FarmSignupVC.swift in Sources */,
+				0F7122D32CE259E900124CE9 /* PhoneNumberVC.swift in Sources */,
 				0FEAADB62CD38EE0009DEA2F /* OnboardingVC.swift in Sources */,
 				0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */,
+				0F7122D72CE2706A00124CE9 /* PendingFarmerVC.swift in Sources */,
 				0FEAADB22CD38EE0009DEA2F /* AppDelegate.swift in Sources */,
+				0FEAADD62CDA53A4009DEA2F /* SelectLocationVC.swift in Sources */,
 				0FEAADB42CD38EE0009DEA2F /* SceneDelegate.swift in Sources */,
 				0FEAADC62CD3A78C009DEA2F /* UiColorExtension.swift in Sources */,
 				0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */,

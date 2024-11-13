@@ -1,5 +1,5 @@
 //
-//  SignupPageVC.swift
+//  loginPageVC.swift
 //  FarmersMarketSystem
 //
 //  Created by Asset on 10/31/24.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class SignupPageVC: UIViewController {
-
+final class LoginPageVC: UIViewController {
+    
     //MARK: - UI elements
     
     private lazy var carrotImage: UIImageView = {
@@ -22,64 +22,34 @@ class SignupPageVC: UIViewController {
     
     //MARK: -Main Content
     
-    private lazy var signupTitleView: UIView = {
+    private lazy var loginTitleView: UIView = {
         let view = UIView()
         
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var signupTitle: UILabel = {
+    private lazy var loginTitle: UILabel = {
         let label = UILabel()
-        label.text = "Sign Up"
+        label.text = "Log in"
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 28, weight: .bold)
+        label.font = UIFont(name: "Helvetica Neue", size: 28)
+
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var signupSubTitle: UILabel = {
+    private lazy var loginSubTitle: UILabel = {
         let label = UILabel()
-        label.text = "Enter your credentials to continue"
+        label.text = "Enter your emails and password"
         label.textAlignment = .left
         label.font = .systemFont(ofSize: 20, weight: .thin)
         label.numberOfLines = 0
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    private lazy var nameView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
-    private lazy var nameTitle: UILabel = {
-        let label = UILabel()
-        label.text = "Name Surname"
-        label.textAlignment = .left
-        label.font = .systemFont(ofSize: 20, weight: .thin)
-        label.numberOfLines = 0
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    private lazy var nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Asset Bissenbayev"
-        textField.textAlignment = .center
-        textField.font = .systemFont(ofSize: 22, weight: .light)
-        textField.borderStyle = .roundedRect
-        textField.layer.cornerRadius = 12
-        textField.keyboardType = .default
-        textField.contentMode = .scaleToFill
-        
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
     }()
     
     private lazy var emailView: UIView = {
@@ -131,13 +101,6 @@ class SignupPageVC: UIViewController {
         return label
     }()
     
-    private lazy var passwordSubView: UIView = {
-        let view = UIView()
-        
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "your password"
@@ -149,6 +112,15 @@ class SignupPageVC: UIViewController {
         textField.contentMode = .scaleToFill
         textField.isSecureTextEntry = true
         
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(systemName: "eye"), for: .selected)
+        button.setImage(UIImage(systemName: "eye.slash"), for: .normal)
+        button.addTarget(self, action: #selector(showHidePassword(_:)), for: .touchUpInside)
+        button.sizeToFit()
+        
+        textField.rightView = button
+        textField.rightViewMode = .always
+
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
@@ -159,7 +131,7 @@ class SignupPageVC: UIViewController {
         let button = UIButton()
         button.backgroundColor = UIColor(rgb: 0x53B175)
         button.layer.cornerRadius = 12
-        button.setTitle("Signup", for: .normal)
+        button.setTitle("Log in", for: .normal)
         button.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -168,22 +140,27 @@ class SignupPageVC: UIViewController {
     
     private lazy var accountQuestionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Already have account? Login"
+        label.text = "Don’t have an account?"
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 16, weight: .thin)
+        
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var getBackButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor(rgb: 0x53B175)
-        button.layer.cornerRadius = 12
-        button.setTitle("Get back", for: .normal)
-        button.addTarget(self, action: #selector(getBackAction), for: .touchUpInside)
+    private lazy var goToSignupLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Sign up"
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 16, weight: .thin)
+        label.textColor = UIColor(rgb: 0x53B175)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+        label.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(signupLabelPressed))
+        label.addGestureRecognizer(tapGesture)
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
 
     override func viewDidLoad() {
@@ -202,13 +179,9 @@ class SignupPageVC: UIViewController {
     private func addSubviews() {
         view.addSubview(carrotImage)
         
-        view.addSubview(signupTitleView)
-        signupTitleView.addSubview(signupTitle)
-        signupTitleView.addSubview(signupSubTitle)
-        
-        view.addSubview(nameView)
-        nameView.addSubview(nameTitle)
-        nameView.addSubview(nameTextField)
+        view.addSubview(loginTitleView)
+        loginTitleView.addSubview(loginTitle)
+        loginTitleView.addSubview(loginSubTitle)
         
         view.addSubview(emailView)
         emailView.addSubview(emailTitle)
@@ -220,7 +193,7 @@ class SignupPageVC: UIViewController {
         
         view.addSubview(loginButton)
         view.addSubview(accountQuestionLabel)
-        view.addSubview(getBackButton)
+        view.addSubview(goToSignupLabel)
     }
     
     private func setConstraints() {
@@ -230,55 +203,44 @@ class SignupPageVC: UIViewController {
             carrotImage.widthAnchor.constraint(equalToConstant: 50),
             carrotImage.heightAnchor.constraint(equalToConstant: 50),
             
-            signupTitleView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            signupTitleView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            signupTitleView.topAnchor.constraint(equalTo: carrotImage.bottomAnchor, constant: 60),
+            loginTitleView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            loginTitleView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginTitleView.topAnchor.constraint(equalTo: carrotImage.bottomAnchor, constant: 80),
         
-            nameView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            nameView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            nameView.topAnchor.constraint(equalTo: signupTitleView.bottomAnchor, constant: 40),
             
             emailView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             emailView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            emailView.topAnchor.constraint(equalTo: nameView.bottomAnchor, constant: 40),
+            emailView.topAnchor.constraint(equalTo: loginTitleView.bottomAnchor, constant: 50),
             
             passwordView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             passwordView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 40),
+            passwordView.topAnchor.constraint(equalTo: emailView.bottomAnchor, constant: 50),
             
-            loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 50),
+            loginButton.topAnchor.constraint(equalTo: passwordView.bottomAnchor, constant: 80),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             loginButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.08),
             
             accountQuestionLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-            accountQuestionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
-            getBackButton.bottomAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20
+            accountQuestionLabel.leadingAnchor.constraint(
+                equalTo: loginButton.leadingAnchor, constant: 30
             ),
-            getBackButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            getBackButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            getBackButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.05),
+            
+            goToSignupLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            goToSignupLabel.leadingAnchor.constraint(
+                equalTo: accountQuestionLabel.trailingAnchor, constant: 5
+            ),
         ])
     }
     
     private func setContentConstraints() {
         NSLayoutConstraint.activate([
-            signupTitle.topAnchor.constraint(equalTo: signupTitleView.topAnchor),
-            signupTitle.leadingAnchor.constraint(equalTo: signupTitleView.leadingAnchor),
+            loginTitle.topAnchor.constraint(equalTo: loginTitleView.topAnchor),
+            loginTitle.leadingAnchor.constraint(equalTo: loginTitleView.leadingAnchor),
             
-            signupSubTitle.topAnchor.constraint(equalTo: signupTitle.bottomAnchor, constant: 8),
-            signupSubTitle.leadingAnchor.constraint(equalTo: signupTitleView.leadingAnchor),
-            signupSubTitle.bottomAnchor.constraint(equalTo: signupTitleView.bottomAnchor),
-            
-            nameTitle.topAnchor.constraint(equalTo: nameView.topAnchor),
-            nameTitle.leadingAnchor.constraint(equalTo: nameView.leadingAnchor),
-            
-            nameTextField.topAnchor.constraint(equalTo: nameTitle.bottomAnchor, constant: 8),
-            nameTextField.leadingAnchor.constraint(equalTo: nameView.leadingAnchor),
-            nameTextField.widthAnchor.constraint(equalTo: nameView.widthAnchor),
-            nameTextField.bottomAnchor.constraint(equalTo: nameView.bottomAnchor),
+            loginSubTitle.topAnchor.constraint(equalTo: loginTitle.bottomAnchor, constant: 8),
+            loginSubTitle.leadingAnchor.constraint(equalTo: loginTitleView.leadingAnchor),
+            loginSubTitle.bottomAnchor.constraint(equalTo: loginTitleView.bottomAnchor),
             
             emailTitle.topAnchor.constraint(equalTo: emailView.topAnchor),
             emailTitle.leadingAnchor.constraint(equalTo: emailView.leadingAnchor),
@@ -295,22 +257,25 @@ class SignupPageVC: UIViewController {
             passwordTextField.topAnchor.constraint(equalTo: passwordTitle.bottomAnchor, constant: 8),
             passwordTextField.leadingAnchor.constraint(equalTo: passwordView.leadingAnchor),
             passwordTextField.widthAnchor.constraint(equalTo: passwordView.widthAnchor),
-            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor)
+            passwordTextField.bottomAnchor.constraint(equalTo: passwordView.bottomAnchor),
+
         ])
     }
     
     @objc private func loginAction() {
-        let signupPageVC = SignupPageVC()
-        signupPageVC.modalPresentationStyle = .fullScreen
-        self.present(signupPageVC, animated: true, completion: nil)
-    }
-    
-    @objc private func getBackAction() {
-        dismiss(animated: true)
+        let selectRoleVC = OnboardingVC()
+        selectRoleVC.modalPresentationStyle = .fullScreen
+        self.present(selectRoleVC, animated: true, completion: nil)
     }
     
     @objc private func showHidePassword(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
         passwordTextField.isSecureTextEntry = !sender.isSelected
+    }
+    
+    @objc private func signupLabelPressed() {
+        let signupPageVC = SignupPageVC()
+        signupPageVC.modalPresentationStyle = .fullScreen
+        self.present(signupPageVC, animated: true, completion: nil)
     }
 }
