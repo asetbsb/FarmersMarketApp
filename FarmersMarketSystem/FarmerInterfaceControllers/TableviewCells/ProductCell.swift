@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ProductCell: UITableViewCell {
     
     private lazy var productImage: UIImageView = {
@@ -23,17 +24,6 @@ class ProductCell: UITableViewCell {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
-    }()
-    
-    private lazy var restockButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = UIColor(rgb: 0x53B175)
-        button.layer.cornerRadius = 12
-        button.setTitle("Restock", for: .normal)
-        button.addTarget(self, action: #selector(restockAction), for: .touchUpInside)
-        
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
     }()
     
     static var identifier = "TableViewCellIdentifier"
@@ -60,27 +50,17 @@ class ProductCell: UITableViewCell {
     private func addSubviews() {
         addSubview(productImage)
         addSubview(productTitle)
-        addSubview(restockButton)
     }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            productImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            productImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: self.frame.width*0.2),
             productImage.centerYAnchor.constraint(equalTo: centerYAnchor),
             productImage.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
             productImage.widthAnchor.constraint(equalTo: productImage.heightAnchor),
             
-            productTitle.leadingAnchor.constraint(equalTo: productImage.trailingAnchor, constant: 12),
+            productTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
             productTitle.centerYAnchor.constraint(equalTo: centerYAnchor),
-            
-            restockButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            restockButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.4),
-            restockButton.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.8),
-            restockButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    @objc private func restockAction() {
-        
     }
 }

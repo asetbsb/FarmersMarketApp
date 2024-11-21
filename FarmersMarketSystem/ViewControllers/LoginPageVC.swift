@@ -263,9 +263,9 @@ final class LoginPageVC: UIViewController {
     }
     
     @objc private func loginAction() {
-        let selectRoleVC = OnboardingVC()
-        selectRoleVC.modalPresentationStyle = .fullScreen
-        self.present(selectRoleVC, animated: true, completion: nil)
+        let farmerInterface = FarmerInterfaceBar()
+        farmerInterface.modalPresentationStyle = .fullScreen
+        self.present(farmerInterface, animated: true, completion: nil)
     }
     
     @objc private func showHidePassword(_ sender: UIButton) {

@@ -19,9 +19,16 @@
 		0FEAADC82CD3B142009DEA2F /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */; };
 		0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */; };
 		0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */; };
-		0FEAADCE2CD4E70F009DEA2F /* CustomUIClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */; };
 		0FEAADD42CD565EE009DEA2F /* SelectRoleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADD32CD565EE009DEA2F /* SelectRoleVC.swift */; };
 		0FEAADD62CDA53A4009DEA2F /* SelectLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAADD52CDA53A4009DEA2F /* SelectLocationVC.swift */; };
+		0FED01222CEB7808000A5778 /* FarmerInterfaceBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01212CEB7808000A5778 /* FarmerInterfaceBar.swift */; };
+		0FED01242CEB791B000A5778 /* DashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01232CEB791B000A5778 /* DashboardVC.swift */; };
+		0FED01262CEB792A000A5778 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01252CEB792A000A5778 /* ProductsVC.swift */; };
+		0FED01282CEB7936000A5778 /* AccountFarmerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01272CEB7936000A5778 /* AccountFarmerVC.swift */; };
+		0FED012A2CEB87B5000A5778 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01292CEB87B5000A5778 /* ProductCell.swift */; };
+		0FED012D2CEBB88D000A5778 /* AddProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED012C2CEBB88D000A5778 /* AddProductCell.swift */; };
+		0FED012F2CEBC068000A5778 /* AddProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED012E2CEBC068000A5778 /* AddProductVC.swift */; };
+		0FED01312CED1380000A5778 /* RestockModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FED01302CED1380000A5778 /* RestockModalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +46,16 @@
 		0FEAADC72CD3B142009DEA2F /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
 		0FEAADC92CD3D45F009DEA2F /* SignupPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageVC.swift; sourceTree = "<group>"; };
 		0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
-		0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIClasses.swift; sourceTree = "<group>"; };
 		0FEAADD32CD565EE009DEA2F /* SelectRoleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRoleVC.swift; sourceTree = "<group>"; };
 		0FEAADD52CDA53A4009DEA2F /* SelectLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationVC.swift; sourceTree = "<group>"; };
+		0FED01212CEB7808000A5778 /* FarmerInterfaceBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerInterfaceBar.swift; sourceTree = "<group>"; };
+		0FED01232CEB791B000A5778 /* DashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardVC.swift; sourceTree = "<group>"; };
+		0FED01252CEB792A000A5778 /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		0FED01272CEB7936000A5778 /* AccountFarmerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFarmerVC.swift; sourceTree = "<group>"; };
+		0FED01292CEB87B5000A5778 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		0FED012C2CEBB88D000A5778 /* AddProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductCell.swift; sourceTree = "<group>"; };
+		0FED012E2CEBC068000A5778 /* AddProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductVC.swift; sourceTree = "<group>"; };
+		0FED01302CED1380000A5778 /* RestockModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestockModalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,17 +103,56 @@
 		0FEAADB02CD38EE0009DEA2F /* FarmersMarketSystem */ = {
 			isa = PBXGroup;
 			children = (
-				0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */,
-				0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */,
-				0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */,
-				0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */,
+				0FED01202CEB77A6000A5778 /* FarmerInterfaceControllers */,
+				0FED011F2CEB7784000A5778 /* Extensions */,
+				0FED011E2CEB7771000A5778 /* Supporting */,
 				0F7122AA2CDCB5A000124CE9 /* ViewControllers */,
-				0FEAADCD2CD4E70F009DEA2F /* CustomUIClasses.swift */,
-				0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */,
-				0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */,
 				0FEAADBF2CD38EE2009DEA2F /* Info.plist */,
 			);
 			path = FarmersMarketSystem;
+			sourceTree = "<group>";
+		};
+		0FED011E2CEB7771000A5778 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0FEAADB12CD38EE0009DEA2F /* AppDelegate.swift */,
+				0FEAADB32CD38EE0009DEA2F /* SceneDelegate.swift */,
+				0FEAADBA2CD38EE2009DEA2F /* Assets.xcassets */,
+				0FEAADBC2CD38EE2009DEA2F /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		0FED011F2CEB7784000A5778 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0FEAADCB2CD3D550009DEA2F /* ViewControllerExtension.swift */,
+				0FEAADC52CD3A78B009DEA2F /* UiColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0FED01202CEB77A6000A5778 /* FarmerInterfaceControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FED01212CEB7808000A5778 /* FarmerInterfaceBar.swift */,
+				0FED01232CEB791B000A5778 /* DashboardVC.swift */,
+				0FED012B2CEBB86F000A5778 /* TableviewCells */,
+				0FED01252CEB792A000A5778 /* ProductsVC.swift */,
+				0FED012E2CEBC068000A5778 /* AddProductVC.swift */,
+				0FED01272CEB7936000A5778 /* AccountFarmerVC.swift */,
+				0FED01302CED1380000A5778 /* RestockModalVC.swift */,
+			);
+			path = FarmerInterfaceControllers;
+			sourceTree = "<group>";
+		};
+		0FED012B2CEBB86F000A5778 /* TableviewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0FED01292CEB87B5000A5778 /* ProductCell.swift */,
+				0FED012C2CEBB88D000A5778 /* AddProductCell.swift */,
+			);
+			path = TableviewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,16 +228,23 @@
 				0FEAADD42CD565EE009DEA2F /* SelectRoleVC.swift in Sources */,
 				0FEAADC82CD3B142009DEA2F /* LoginPageVC.swift in Sources */,
 				0F7122D52CE26D8A00124CE9 /* FarmSignupVC.swift in Sources */,
+				0FED01282CEB7936000A5778 /* AccountFarmerVC.swift in Sources */,
+				0FED01312CED1380000A5778 /* RestockModalVC.swift in Sources */,
 				0F7122D32CE259E900124CE9 /* PhoneNumberVC.swift in Sources */,
 				0FEAADB62CD38EE0009DEA2F /* OnboardingVC.swift in Sources */,
+				0FED01262CEB792A000A5778 /* ProductsVC.swift in Sources */,
+				0FED012D2CEBB88D000A5778 /* AddProductCell.swift in Sources */,
 				0FEAADCC2CD3D550009DEA2F /* ViewControllerExtension.swift in Sources */,
 				0F7122D72CE2706A00124CE9 /* PendingFarmerVC.swift in Sources */,
+				0FED012F2CEBC068000A5778 /* AddProductVC.swift in Sources */,
 				0FEAADB22CD38EE0009DEA2F /* AppDelegate.swift in Sources */,
 				0FEAADD62CDA53A4009DEA2F /* SelectLocationVC.swift in Sources */,
+				0FED01242CEB791B000A5778 /* DashboardVC.swift in Sources */,
+				0FED012A2CEB87B5000A5778 /* ProductCell.swift in Sources */,
 				0FEAADB42CD38EE0009DEA2F /* SceneDelegate.swift in Sources */,
+				0FED01222CEB7808000A5778 /* FarmerInterfaceBar.swift in Sources */,
 				0FEAADC62CD3A78C009DEA2F /* UiColorExtension.swift in Sources */,
 				0FEAADCA2CD3D45F009DEA2F /* SignupPageVC.swift in Sources */,
-				0FEAADCE2CD4E70F009DEA2F /* CustomUIClasses.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
